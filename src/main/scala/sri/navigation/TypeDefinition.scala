@@ -1,13 +1,12 @@
 package sri.navigation
 
 import sri.core.{ReactClass, ReactElement, ReactJSProps}
-import sri.macros.{
+import scalajsplus.macros.{
   FunctionObjectMacro,
-  rename,
-  OptDefault => NoValue,
-  OptionalParam => OP
+  rename
 }
-
+import scalajsplus.{  OptDefault => NoValue,
+  OptionalParam => OP}
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.literal
 import scala.scalajs.js.{undefined, |, UndefOr => U}
@@ -92,7 +91,7 @@ object NavigationStackScreenOptions {
             headerLeft: OP[ReactElement] = NoValue,
             headerRight: OP[ReactElement] = NoValue)
     : NavigationStackScreenOptions = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
+    import scalajsplus.DangerousUnionToJSAnyImplicit._
     val p = FunctionObjectMacro()
     p.asInstanceOf[NavigationStackScreenOptions]
   }
@@ -107,7 +106,7 @@ object NavigationTabScreenOptions {
       tabBarIcon: OP[IconOptions => ReactElement] = NoValue,
       tabBarLabel: OP[String | ReactElement] = NoValue,
       tabBarVisible: OP[Boolean] = NoValue): NavigationTabScreenOptions = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
+    import scalajsplus.DangerousUnionToJSAnyImplicit._
     val p = FunctionObjectMacro()
     p.asInstanceOf[NavigationTabScreenOptions]
   }
@@ -123,7 +122,7 @@ object NavigationDrawerScreenOptions {
       drawerLabel: OP[
         String | ReactElement | js.Function1[IconOptions, ReactElement]] =
         NoValue): NavigationDrawerScreenOptions = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
+    import scalajsplus.DangerousUnionToJSAnyImplicit._
     val p = FunctionObjectMacro()
     p.asInstanceOf[NavigationDrawerScreenOptions]
   }
@@ -302,7 +301,7 @@ object NavigationScreenRouteConfig {
       @rename("navigationOptions") navigationOptionsDynamic: OP[
         NavigationScreenConfigProps[C] => T] = NoValue)
     : NavigationScreenRouteConfig = {
-    import sri.universal.DangerousUnionToJSAnyImplicit._
+    import scalajsplus.DangerousUnionToJSAnyImplicit._
     val p = FunctionObjectMacro()
     p.asInstanceOf[NavigationScreenRouteConfig]
   }
@@ -316,7 +315,7 @@ trait NavigationLazyScreenRouteConfig extends js.Object {
 }
 
 object NavigationLazyScreenRouteConfig {
-  import sri.universal.DangerousUnionToJSAnyImplicit._
+  import scalajsplus.DangerousUnionToJSAnyImplicit._
   @inline
   def apply(
       getScreen: js.Function0[NavigationScreenComponent[_, _]] | NavigationNavigator[

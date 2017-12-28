@@ -1,7 +1,8 @@
 package sri.navigation
 
 import sri.core.{ComponentConstructor, ReactClass, ReactElement}
-import sri.macros.{FunctionObjectMacro, OptDefault, OptionalParam}
+import scalajsplus.{OptDefault, OptionalParam}
+import scalajsplus.macros.FunctionObjectMacro
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport

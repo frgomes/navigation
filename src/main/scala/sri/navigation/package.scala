@@ -1,7 +1,8 @@
 package sri
 
 import sri.core.{ComponentConstructor, ReactElement}
-import sri.macros.{OptDefault, OptionalParam}
+import scalajsplus.{OptDefault, OptionalParam}
+import scalajsplus.macros.FunctionObjectMacro
 import sri.navigation.navigators.NavigationNavigatorConstructor
 import sri.universal.PropTypes
 import sri.universal.apis.AnimatedValue
